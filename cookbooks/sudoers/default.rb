@@ -1,5 +1,5 @@
 template "/home/vagrant/sudoers.old" do
-  source "templates/sudoers"
+  source "./templates/sudoers"
 end
 
 execute "convert lf code dos to unix" do
