@@ -1,0 +1,5 @@
+include_recipe "../cookbooks/user/default.rb"
+include_recipe "../cookbooks/perl/default.rb"
+include_recipe "../cookbooks/sudoers/default.rb"
+include_recipe "../cookbooks/vim/default.rb"
+include_recipe "../cookbooks/git/default.rb"
