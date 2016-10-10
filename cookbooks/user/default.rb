@@ -8,3 +8,10 @@ execute 'set default shell to zsh' do
   command 'chsh -s /bin/zsh hanocha'
   only_if 'chsh -l | grep /bin/zsh'
 end
+
+file '/home/hanocha/.zshrc' do
+  action :create
+  owner 'hanocha'
+  mode '0664'
+  not_if 'ls /home/hanocha/.zshrc'
+end
