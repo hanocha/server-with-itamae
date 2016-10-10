@@ -14,6 +14,7 @@ end
 
 execute 'init rbenv' do
     command '/usr/local/rbenv/bin/rbenv init -'
+    not_if 'rbenv -v'
 end
 
 directory '/usr/local/rbenv/shims' do
@@ -35,6 +36,7 @@ execute "convert lf code dos to unix on /etc/profile.d/rbenv.sh" do
     command "perl -pe 's/\r//' /tmp/rbenv.sh > /etc/profile.d/rbenv.sh"
 end
 
-execute "install ruby 2.3.1"do
+execute "install ruby 2.3.1" do
     command "rbenv install 2.3.1"
+    not_if 'rbenv versions | grep 2.3.1'
 end
