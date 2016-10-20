@@ -1,0 +1,1 @@
+itamae ssh --host 192.168.33.100 cookbooks/recipe.rb

@@ -24,6 +24,7 @@ GEM
 
 PLATFORMS
   ruby
+  mswin64
   x86-mingw32
 
 DEPENDENCIES
